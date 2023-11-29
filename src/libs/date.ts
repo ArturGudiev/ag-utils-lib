@@ -12,6 +12,6 @@ export function getDiffInDaysCommon(s1: string, s2: string, format: string): num
 
 
 
-// export function getDiffInDaysForLogDates(s1: string, s2: string): number {
-//     return getDiffInDaysCommon(s1, s2, SCHEDULED_TASK_DATE_TIME_FORMAT);
-// }
+export function getCurrentDate(format: string) {
+    return moment().format(format);
+}

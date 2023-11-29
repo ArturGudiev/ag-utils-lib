@@ -6,3 +6,4 @@ export declare function editString(str: string, extension?: string, options?: {
 }): Promise<string>;
 export declare function isNumeric(str: string): boolean;
 export declare function addTabsToLines(text: string, tabsNumber?: number): string;
+export declare function equalLowerStrings(s1: string, s2: string): boolean;

@@ -30,3 +30,6 @@ export function addTabsToLines(text: string, tabsNumber = 1): string {
     return text.split('\n').map(s => `${'\t'.repeat(tabsNumber)} ${s}`).join('\n');
 }
 
+export function equalLowerStrings(s1: string, s2: string) {
+    return s1.toLowerCase() === s2.toLowerCase();
+}
