@@ -14,7 +14,6 @@ export declare function getInputFromEditor(message?: string, options?: {
     extension?: string;
     originalContent?: string;
     filename?: string;
-    tempFile: string;
 }): Promise<string>;
 export declare function waitForFirstFileChanges(filename: string, originalContent?: string): Promise<string>;
 export declare function sleep(ms: number): Promise<unknown>;

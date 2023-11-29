@@ -52,8 +52,8 @@ export function printSeveralInColorInline(messages: IMessageColorInline[]) {
 }
 
 export async function getInputFromEditor(message = '', options: {
-    extension?: string, originalContent?: string, filename?: string, tempFile: string
-} = {tempFile: 'C:\\Artur\\temp\\'}): Promise<string> {
+    extension?: string, originalContent?: string, filename?: string
+} = {}): Promise<string> {
     if (message) {
         console.log(message);
     }
