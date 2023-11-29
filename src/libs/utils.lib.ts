@@ -20,3 +20,13 @@ export async function editString(str: string, extension = '', options: { [key: s
     }
     return await getInputFromEditor(options.message ? options.message : '', opts);
 }
+
+export function isNumeric(str: string): boolean {
+    return !isNaN(Number(str)) && !isNaN(parseFloat(str));
+}
+
+
+export function addTabsToLines(text: string, tabsNumber = 1): string {
+    return text.split('\n').map(s => `${'\t'.repeat(tabsNumber)} ${s}`).join('\n');
+}
+
