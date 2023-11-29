@@ -1,6 +1,6 @@
 {
   "name": "ag-utils-lib",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "An utility library for different purposes",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -18,9 +18,13 @@
     "typescript": "^5.3.2"
   },
   "dependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/clipboardy": "^2.0.1",
     "@types/lodash": "^4.14.202",
     "@types/readline-sync": "^1.4.8",
     "@types/underscore": "^1.11.15",
+    "chalk": "^5.3.0",
+    "clipboardy": "^4.0.0",
     "lodash": "^4.17.21",
     "readline-sync": "^1.4.10",
     "underscore": "^1.13.6"
