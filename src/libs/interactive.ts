@@ -1,9 +1,10 @@
 import inquirer from "inquirer";
 import { getUserInput } from "./io.lib";
+import nfzf from 'node-fzf'
 
 export async function selectObjectFromList(choices: string[], funcOptions: any = {}): Promise<any> {
     // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const nfzf = require('node-fzf')
+    // const nfzf = require('node-fzf')
     if (choices.length === 1) {
         return {value: choices[0], index: 0};
     }
