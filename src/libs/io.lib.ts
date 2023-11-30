@@ -2,8 +2,9 @@ import _ from 'underscore';
 import readlineSync from 'readline-sync';
 import fs, { writeFileSync } from 'fs';
 import { deleteFile, openFileAtLastPosition } from './fs.lib';
-import chalk from 'chalk';
 import { getRandomString } from './random.lib';
+// import * as chalkModule from 'chalk';
+// const chalk: typeof chalkModule.Chalk = chalkModule.default;
 
 export async function getUserInput(message: string, colon = true) {
     message = message + (colon ? ':' : '') + ' ';
@@ -28,28 +29,6 @@ export function printWithoutNewLine(message: any): void {
     process.stdout.write(message);
 }
 
-
-export function printInColor(message: any, color: string, newline=true): void {
-    if (newline) {
-        console.log(chalk.hex(color)(message));
-    } else {
-        process.stdout.write(chalk.hex(color)(message));
-    }
-}
-
-export function printInColorInline(message: any, color: string): void {
-    printInColor(message, color, false);
-}
-
-export interface IMessageColorInline {
-    message: any;
-    color: string;
-}
-export function printSeveralInColorInline(messages: IMessageColorInline[]) {
-    messages.forEach(obj => {
-        printInColorInline(obj.message, obj.color);
-    });
-}
 
 export async function getInputFromEditor(message = '', options: {
     extension?: string, originalContent?: string, filename?: string
