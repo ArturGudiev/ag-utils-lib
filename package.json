@@ -1,6 +1,6 @@
 {
   "name": "ag-utils-lib",
-  "version": "1.0.25",
+  "version": "1.0.36",
   "description": "An utility library for different purposes",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

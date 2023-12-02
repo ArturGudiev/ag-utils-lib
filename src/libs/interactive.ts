@@ -1,4 +1,5 @@
-import inquirer from "inquirer";
+// import inquirer from "inquirer";
+// import inquirer from "inquirer";
 import { getUserInput } from "./io.lib";
 // import nfzf from 'node-fzf'
 
@@ -17,18 +18,18 @@ export async function selectObjectFromList(choices: string[], funcOptions: any =
 }
 
 
-// export async function selectFromList(choices: string[], message = '', funcOptions: any = {}): Promise<string> {
-//     if (message) {
-//         console.log(message);
-//     }
-//     const res = await selectObjectFromList(choices, funcOptions);
-//     return res ? res.value : null;
-// }
+export async function selectFromList(choices: string[], message = '', funcOptions: any = {}): Promise<string> {
+    if (message) {
+        console.log(message);
+    }
+    const res = await selectObjectFromList(choices, funcOptions);
+    return res ? res.value : null;
+}
 
-// export async function selectIndexFromList(choices: string[]): Promise<number> {
-//     const res = await selectObjectFromList(choices);
-//     return res ? res.index : null;
-// }
+export async function selectIndexFromList(choices: string[]): Promise<number> {
+    const res = await selectObjectFromList(choices);
+    return res ? res.index : null;
+}
 
 
 // export async function confirmMessageInquirer(message: string, defaultValue = true): Promise<boolean> {
@@ -43,19 +44,19 @@ export async function selectObjectFromList(choices: string[], funcOptions: any =
 //     return answers.confirmation;
 // }
 
-// export async function confirmMessage(message: string, defaultValue = true): Promise<boolean> {
-//     const YesNoPart = defaultValue ? '(Y/n)' : '(y/N)';
-//     const answer= await getUserInput(message + ' ' + YesNoPart);
-//     if (answer === '') {
-//         return defaultValue;
-//     }
-//     if (['y', 'yes'].includes(answer.toLowerCase())) {
-//         return true;
-//     }
-//     return false;
-//     // return answers.confirmation;
-// }
+export async function confirmMessage(message: string, defaultValue = true): Promise<boolean> {
+    const YesNoPart = defaultValue ? '(Y/n)' : '(y/N)';
+    const answer= await getUserInput(message + ' ' + YesNoPart);
+    if (answer === '') {
+        return defaultValue;
+    }
+    if (['y', 'yes'].includes(answer.toLowerCase())) {
+        return true;
+    }
+    return false;
+    // return answers.confirmation;
+}
 
-// export async function waitForUserInput(message = 'Press enter') {
-//     await getUserInput(message);
-// }
+export async function waitForUserInput(message = 'Press enter') {
+    await getUserInput(message);
+}

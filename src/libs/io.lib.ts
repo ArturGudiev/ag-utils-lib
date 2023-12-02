@@ -3,6 +3,7 @@ import readlineSync from 'readline-sync';
 import fs, { writeFileSync } from 'fs';
 import { deleteFile, openFileAtLastPosition } from './fs.lib';
 import { getRandomString } from './random.lib';
+import chalk from 'chalk';
 // import * as chalkModule from 'chalk';
 // const chalk: typeof chalkModule.Chalk = chalkModule.default;
 
@@ -11,7 +12,7 @@ export async function getUserInput(message: string, colon = true) {
     return readlineSync.question(message);
 }
 
-export function tablifyString(str: string, num = 1) {
+export function tab(str: string, num = 1) {
     return str.split('\n').map(line => `${'\t'.repeat(num)}${line}`).reduce((a, b) => `${a}\n${b}`, '');
 }
 
