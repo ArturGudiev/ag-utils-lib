@@ -4,8 +4,27 @@ import fs, { writeFileSync } from 'fs';
 import { deleteFile, openFileAtLastPosition } from './fs.lib';
 import { getRandomString } from './random.lib';
 import chalk from 'chalk';
-// import * as chalkModule from 'chalk';
-// const chalk: typeof chalkModule.Chalk = chalkModule.default;
+import * as readline from 'readline';
+
+export async function getUserInputUnicode(message: string, colon = true) {
+    message = message + (colon ? ':' : '') + ' ';
+    const rl = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout
+    });
+    let wait = true;
+    let answerToReturn = '';
+    rl.question(message, (answer) => {
+        answerToReturn = answer;
+        wait = false;
+        rl.close();
+    });
+    while (wait) {
+        await sleep(200);
+    }
+    return answerToReturn;
+}
+
 
 export async function getUserInput(message: string, colon = true) {
     message = message + (colon ? ':' : '') + ' ';
