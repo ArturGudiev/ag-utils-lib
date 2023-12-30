@@ -1,3 +1,8 @@
+/**
+ *
+ * @param message Added some comments
+ */
+export declare function getUserInputUnicode(message: string, colon?: boolean): Promise<string>;
 export declare function getUserInput(message: string, colon?: boolean): Promise<string>;
 export declare function tab(str: string, num?: number): string;
 export declare function newline(n?: number): void;

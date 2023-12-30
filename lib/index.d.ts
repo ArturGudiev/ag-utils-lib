@@ -9,5 +9,3 @@ export * from './libs/random.lib';
 export * from './libs/regex';
 export * from './libs/string';
 export * from './libs/utils.lib';
-export declare function multiply(a: number, b: number): number;
-export declare function main(): Promise<void>;

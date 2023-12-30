@@ -6,6 +6,10 @@ import { getRandomString } from './random.lib';
 import chalk from 'chalk';
 import * as readline from 'readline';
 
+/**
+ * 
+ * @param message Added some comments
+ */
 export async function getUserInputUnicode(message: string, colon = true) {
     message = message + (colon ? ':' : '') + ' ';
     const rl = readline.createInterface({
