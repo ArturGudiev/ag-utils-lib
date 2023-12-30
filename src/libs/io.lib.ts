@@ -9,11 +9,13 @@ import chalk from 'chalk';
 
 export async function getUserInput(message: string, colon = true) {
     message = message + (colon ? ':' : '') + ' ';
-    return readlineSync.question(message);
+    return readlineSync.question(message, {
+        encoding: 'utf-8'
+      });
 }
 
 export function tab(str: string, num = 1) {
-    return str.split('\n').map(line => `${'\t'.repeat(num)}${line}`).reduce((a, b) => `${a}\n${b}`, '');
+    return str.split('\n').map(line => `${'\t'.repeat(num)}${line}`).join('\n');
 }
 
 export function newline(n = 1): void {

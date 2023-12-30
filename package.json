@@ -1,10 +1,11 @@
 {
   "name": "ag-utils-lib",
-  "version": "1.0.37",
+  "version": "1.0.38",
   "description": "An utility library for different purposes",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
+    "start": "node lib/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

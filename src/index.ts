@@ -9,7 +9,3 @@ export * from './libs/random.lib';
 export * from './libs/regex';
 export * from './libs/string';
 export * from './libs/utils.lib';
-
-export function multiply(a: number, b: number): number {
-    return a * b;
-}
